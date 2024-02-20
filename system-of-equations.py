@@ -36,23 +36,21 @@ if M == 3:
     
 
 elif M == 2:
-    print("pour résoudre ce système {\n  ax + by + cz = d\n  ax + by + cz = d\n}")
+    print("pour résoudre ce système {\n  ax + by = c\n  ax + by = c\n}")
 
     print("\nEntrez les coefficients de l'équation 1")
     a1 = float(Fraction(input("Entrez le premier coefficient: ")))
     b1 = float(Fraction(input("Entrez le deuxième coefficient: ")))
     c1 = float(Fraction(input("Entrez le troisième coefficient: ")))
-    d1 = float(Fraction(input("Entrez le dernier coefficient: ")))
 
 
     print("\nEntrez les coefficients de l'équation 2")
     a2 = float(Fraction(input("Entrez le premier coefficient: ")))
     b2 = float(Fraction(input("Entrez le deuxième coefficient: ")))
     c2 = float(Fraction(input("Entrez le troisième coefficient: ")))
-    d2 = float(Fraction(input("Entrez le dernier coefficient: ")))
 
     #Solving
-    A = np.array([[a1,b1,c1],[a2,b2,c2]])
-    B = np.array([d1,d2])
+    A = np.array([[a1,b1],[a2,b2]])
+    B = np.array([c1,c2])
     C = np.linalg.solve(A,B)
     print("Les solutions de ce système est le couple (x,y) = ",C)
