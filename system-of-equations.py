@@ -1,10 +1,10 @@
-#Mohamed Talhaoui
+#NumPy Library #Mohamed Talhaoui
 import numpy as np
 from fractions import Fraction
 
 M = int(input("Combien des inconnues dans cette system? : "))
 
-
+#Pour 3 Inconnus 
 if M == 3:
     print("pour résoudre ce système {\n  ax + by + cz = d\n  ax + by + cz = d\n  ax + by + cz = d\n}")
 
@@ -28,13 +28,13 @@ if M == 3:
     c3 = float(Fraction(input("Entrez le troisième coefficient: ")))
     d3 = float(Fraction(input("Entrez le dernier coefficient: ")))
 
-    #Solving
+#Le Résolution de la Système 
     A = np.array([[a1,b1,c1],[a2,b2,c2],[a3,b3,c3]])
     B = np.array([d1,d2,d3])
     C = np.linalg.solve(A,B)
     print("Les solutions de ce système est le triple (x,y,z) = ",C)
     
-
+#Pour 2 Inconnus 
 elif M == 2:
     print("pour résoudre ce système {\n  ax + by = c\n  ax + by = c\n}")
 
@@ -49,7 +49,7 @@ elif M == 2:
     b2 = float(Fraction(input("Entrez le deuxième coefficient: ")))
     c2 = float(Fraction(input("Entrez le troisième coefficient: ")))
 
-    #Solving
+#Le Résolution de la Système
     A = np.array([[a1,b1],[a2,b2]])
     B = np.array([c1,c2])
     C = np.linalg.solve(A,B)
